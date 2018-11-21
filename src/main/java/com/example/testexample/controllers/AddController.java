@@ -13,13 +13,19 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class AddController {
-//    
-//    @Autowired
-//    PersonDaoImp personDaoImp;
-//    
-//    @RequestMapping(value = "/add.form",method = RequestMethod.POST)
-//    public String test(@RequestParam("id") Integer id, @RequestParam("name") String name, Model model){
-//        personDaoImp.insert(new Person(id, name));
-//        return "add";
-//    }
+    
+    @Autowired
+    PersonDaoImp personDaoImp;
+    
+    @RequestMapping(value = "/add.form",method = RequestMethod.GET)
+    public String testGet(){
+        return "add";
+    }
+    
+    @RequestMapping(value = "/add.form",method = RequestMethod.POST)
+    public String testPost(@RequestParam("id") Integer id, @RequestParam("name") String name, Model model){
+        personDaoImp.insert(new Person(id, name));
+          
+        return "add";
+    }
 }

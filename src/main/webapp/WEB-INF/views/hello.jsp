@@ -8,14 +8,10 @@
     <body>
         <h1>Выберите одно из действий</h1>
         
-        <a href="example.com/jsp2.jsp">Добавить</a>
-        <form action="add.form" method="post">
-           
-            <input type="submit">
-        </form>
-        <form action="list.form" method="post">
-           
-            <input type="submit">
-        </form>
+         <div>
+                <button onclick="location.href='/testexample/add.form'">добавить</button>
+                <button onclick="location.href='/testexample/list.form'">список</button>
+            </div>
+        
     </body>
 </html>

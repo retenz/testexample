@@ -13,5 +13,9 @@
     </head>
     <body>
         <h1>Hello World!</h1>
+        <form method="post">
+                <button type="submit">Показать список</button>
+        </form>
+        
     </body>
 </html>

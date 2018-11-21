@@ -1,10 +1,6 @@
-<%-- 
-    Document   : add
-    Created on : 19.11.2018, 17:25:50
-    Author     : Tenadze
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,6 +8,16 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Введите данные</h1>
+        <form method="post">
+                <label>ID:
+                    <input type="text" name="id"><br />
+                </label>
+                <label>Name:
+                    <input type="text" name="name"><br />
+                </label>
+                <button type="submit">Добавить</button>
+        </form>
+        
     </body>
 </html>

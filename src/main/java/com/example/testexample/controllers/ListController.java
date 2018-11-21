@@ -13,9 +13,13 @@ public class ListController {
     @Autowired
     PersonDaoImp personDaoImp;
     
-    @RequestMapping(value = "/list.form",method = RequestMethod.POST)
-    public String test(Model model){
+    @RequestMapping(value = "/list.form",method = RequestMethod.GET)
+    public String testGET(){
+    return "list";
+    }
     
+    @RequestMapping(value = "/list.form",method = RequestMethod.POST)
+    public String testPOST(Model model){
     model.addAttribute(personDaoImp.getAll());
     return "list";
     }
