@@ -5,7 +5,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>ADD Page</title>
     </head>
     <body>
         <h1>Введите данные</h1>
@@ -19,5 +19,8 @@
                 <button type="submit">Добавить</button>
         </form>
         
+        <div>
+            <button onclick="location.href='/testexample'">Вернуться в главное меню</button>
+        </div>
     </body>
 </html>

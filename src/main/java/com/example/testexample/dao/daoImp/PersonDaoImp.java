@@ -29,14 +29,19 @@ public class PersonDaoImp implements PersonDao{
     @Override
     public void insert(Person person) {
         
-         String sql= "insert into APP.PERSONS (idd, namee) values (?,?)";
+         String sql= "insert into Test (id, name) values (?,?)";
             jdbcTemplate.update(sql, new Object[]{person.getId(), person.getName()});
     }
 
     @Override
     public List<Person> getAll() {
-        String sql= "select * from APP.PERSONS";
+        String sql= "select * from Test";
         return jdbcTemplate.query(sql, rowMapper);
     }
-    
+
+    @Override
+    public void create() {
+        String sql= "CREATE table if not exist test (Id INT NOT NULL, Name VARCHAR(100) NOT NULL, PRIMARY KEY(Id))";
+        jdbcTemplate.execute(sql);
+    }
 }

@@ -1,21 +1,35 @@
-<%-- 
-    Document   : list
-    Created on : 19.11.2018, 17:25:41
-    Author     : Tenadze
---%>
-
+<%@page import="org.springframework.ui.Model"%>
+<%@page import="java.util.List"%>
+<%@page import="java.util.List"%>
+<%@page import="com.example.testexample.model.Person"%>
+<%@page import="com.example.testexample.model.Person"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Список данных</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
-        <form method="post">
-                <button type="submit">Показать список</button>
-        </form>
+        <table>
+            <th>Id</th>
+            <th>Name</th>
+        <c:forEach  var="pr" items="${persons}">
+            <tr>
+                <td>${pr.id}</td>
+                <td>${pr.name}</td>
+            </tr>
+        </c:forEach>
+        </table>
         
+        
+        <div>
+            <button onclick="location.href='/testexample'">Вернуться в главное меню</button>
+        </div>
+        
+        
+        
+
     </body>
 </html>

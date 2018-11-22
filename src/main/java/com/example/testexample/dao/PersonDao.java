@@ -6,4 +6,5 @@ import java.util.List;
 public interface PersonDao {
     void insert(Person model);
     List<Person> getAll();
+    void create();
 }

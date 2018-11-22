@@ -10,7 +10,9 @@
         
          <div>
                 <button onclick="location.href='/testexample/add.form'">добавить</button>
-                <button onclick="location.href='/testexample/list.form'">список</button>
+                <form action="list.form" method="post">
+                <button type="submit">Показать список</button>
+                </form>
             </div>
         
     </body>
